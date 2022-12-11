@@ -1,0 +1,244 @@
+@import '~antd/dist/antd.less';
+@import 'variables.less';
+
+.LoginLayoutContent {
+  min-width: 23rem;
+  padding: 3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.LoginAlertContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 18rem;
+  padding-bottom: 3rem;
+  align-content: center;
+}
+
+.sidebar-logo {
+  height: 4rem;
+  margin: auto;
+  display: flex !important; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Layout {
+  height: 100vh;
+  background-image: url('/img/login_bg.png');
+}
+
+.pageheader {
+  display: flex !important; 
+  justify-content: center;
+  flex-direction: column;
+  position: sticky; 
+  top: 0;
+  z-index: 1;
+  height: 4rem; 
+  width: 100%; 
+  padding: 0rem 1rem 0rem 1rem; 
+  box-shadow: 10px 2px 8px 0px rgb(0 0 0 / 15%)
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  margin: 2.25rem;
+  padding: 1.5rem;
+  position: relative; //Relative to its own space, which is container.
+  background-color: @white;
+  border-radius: 10px; 
+  box-shadow: 0px 20px 25px -10px rgb(0 0 0 / 25%) ;
+}
+
+.inner-container {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  position: relative; //Relative to its own space, which is container.
+  border: 1px solid rgb(0 0 0 / 15%);
+  background-color: @white;
+  border-radius: 10px; 
+  box-shadow: 0px 20px 25px -10px rgb(0 0 0 / 25%) ;
+}
+
+.data-container {
+  margin: 3rem;
+  padding: 1.5rem;
+  position: relative; //Relative to its own space, which is container.
+  background-color: @white;
+  border-radius: 10px; 
+  box-shadow: 0px 20px 25px -10px rgb(0 0 0 / 25%) ;
+  border: 1px solid rgb(0 0 0 / 15%);
+}
+
+.info-container {
+  margin: 3rem;
+  padding: 1.5rem;
+  position: relative; //Relative to its own space, which is container.
+  border: 1px solid @primary-color;
+  background-color: fade(@primary-color, 25%);
+  border-radius: 10px; 
+  box-shadow: 0px 20px 25px -10px rgb(0 0 0 / 25%) ;
+}
+
+.delete-container {
+  padding: 1.5rem;
+  position: relative; //Relative to its own space, which is container.
+  background-color: @white;
+  border: 1px solid @error-color;
+  border-radius: 10px; 
+  box-shadow: 0px 20px 25px -10px rgb(0 0 0 / 25%) ;
+}
+
+.btn-container{
+  margin: 1.5rem;
+  position: relative;
+}
+
+.contenttitle {
+  font-size: 24px !important;
+  margin: 0px !important;
+}
+
+.containertitle {
+  font-size: 24px !important;
+  margin: 0rem 0rem 1.5rem 0rem !important;
+}
+
+.emptycontainer{
+  height: 100%;
+  font-size: 20px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.clickable-pointer{
+  cursor: pointer;
+}
+
+.table-row-light {
+  background-color: #ffffff;
+}
+
+.table-row-dark {
+  background-color: #f1f1f1;
+}
+
+.flex-center-row{
+  display: flex !important; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.flex-center-column{
+  display: flex !important; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.endpage-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.remove {
+  color: @error-color;
+}
+
+.warning-btn{
+  background-color: @warning-color;
+  border-color:@warning-color;
+  color: #fff;
+}
+
+.warning-btn:focus{
+  background-color: fade(@warning-color, 75%) !important;
+  border-color: fade(@warning-color, 75%) !important;
+  color: #fff;
+}
+
+.warning-btn:hover{
+  background-color: fade(@warning-color, 75%) !important;
+  border-color: fade(@warning-color, 75%) !important;
+  color: #fff;
+}
+
+.glow svg{
+  filter: drop-shadow(0px 0px 10px @primary-color);
+  box-shadow: 0px 0px 6px 2px fade(@primary-color, 100%);
+  animation: blinker 1s linear infinite;
+  border-radius: 50%;  
+  float:left;
+  margin-right: 10px;
+}
+
+@keyframes blinker {  
+  50% {   
+    filter: drop-shadow(0px 0px 0px @primary-color); 
+    box-shadow: 0px 0px 6px 2px fade(@primary-color, 25%);
+  }
+}
+
+//This casts a red otline on deletion inputs.
+.deleteinput:focus, .deleteinput:not(.ant-input-affix-wrapper-disabled):hover, .deleteinput:hover, .deleteinput.ant-input-affix-wrapper-focused {
+  border-color: #F5222D;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(245,34,45, .2);
+  box-shadow: 0 0 0 2px rgba(245,34,45, .2);
+}
+
+// This reduces title width (within Results page). Requires 'Divider' to have class 'riskdivider' 
+.ant-divider.ant-divider-horizontal.ant-divider-with-text.ant-divider-with-text-left.riskdivider span.ant-divider-inner-text{
+  width: 90%;
+}
+
+//This fixes text breakage for Statistic and Divider
+.ant-statistic-content-value, .ant-statistic-title, .ant-divider-inner-text {
+  text-align-last: left; //Do not misplace text while unwrapping
+  word-wrap: break-word; //Break words and go to new line
+  max-width: 100%;
+}
+
+//This fixes Divider being misalligned when container is set awith flexbox
+.ant-divider-horizontal.ant-divider-with-text-left::before, 
+.ant-divider-horizontal.ant-divider-with-text-left::after {
+  top: 0;
+}
+
+//This fixes Tooltip width not working on flexbox containers. Biggest gotcha, hate flex yet?
+//https://gaurav5430.medium.com/css-flex-positioning-gotchas-child-expands-to-more-than-the-width-allowed-by-the-parent-799c37428dd6
+.ant-breadcrumb > * {
+  overflow: hidden; //Auto is good too but seems to be wanky on re-renders.
+  display: inherit; //Make span-text and span-separator behave on the same line.
+}
+
+//This handles color for SurveyJS Matrix-Rubric.
+.sv-root-modern .sv-matrix__text--checked {
+  color: rgb(255, 255, 255) !important;
+  background-color: fade(@primary-color, 75%) !important;
+}
+
+
+.sv-root-modern ::-webkit-scrollbar-thumb {
+  background: fade(@primary-color, 75%) !important;
+}
